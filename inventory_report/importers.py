@@ -1,6 +1,6 @@
+import json
 from typing import Dict, Type, List
 from abc import ABC, abstractmethod
-import json
 from inventory_report.product import Product
 
 
@@ -14,10 +14,12 @@ class Importer(ABC):
 
 
 class JsonImporter(Importer):
-    def import_data(self, path: str) -> List[Product]:
-        with open(path, "r") as file:
-            product_data = json.load(file)
-            return [Product(**product) for product in product_data]
+    def import_data(self) -> List[Product]:
+        if not self.path.endswith(".json"):
+            raise ValueError("Arquivo inválido")
+
+        with open(self.path, "r") as file:
+            return [Product(**product) for product in json.load(file)]
 
 
 class CsvImporter:
