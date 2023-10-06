@@ -4,19 +4,19 @@ from inventory_report.product import Product
 def test_create_product() -> None:
     # Instancia
     product = Product(
-        id=1,
-        company_name="Gabriel Guimaraes",
-        product_name="Dev Jr",
-        manufacturing_date="1996-07-24",
-        expiration_date="2050-07-24",
-        serial_number="22558844jk",
-        storage_instructions="test create product",
+        id=6,
+        company_name="Cantrell Drug Company",
+        product_name="Silicea Belladonna",
+        manufacturing_date="2021-07-18",
+        expiration_date="2025-10-05",
+        serial_number="FR57 7414 7254 046O IHVX AV6L H71",
+        storage_instructions="instrucao 6",
     )
     # Verificação
-    assert product.id == 1
-    assert product.company_name == "Gabriel Guimaraes"
-    assert product.product_name == "Dev Jr"
-    assert product.manufacturing_date == "1996-07-24"
-    assert product.expiration_date == "2050-07-24"
-    assert product.serial_number == "22558844jk"
-    assert product.storage_instructions == "test create product"
+    assert product.id == 6
+    assert product.company_name == "Cantrell Drug Company"
+    assert product.product_name == "Silicea Belladonna"
+    assert product.manufacturing_date == "2021-07-18"
+    assert product.expiration_date == "2025-10-05"
+    assert product.serial_number == "FR57 7414 7254 046O IHVX AV6L H71"
+    assert product.storage_instructions == "instrucao 6"
