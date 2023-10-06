@@ -14,12 +14,12 @@ def test_product_report() -> None:
     )
 
     expected_report = (
-        f"The product {product.id} - {product.product_name}"
+        f" The product {product.id} - {product.product_name}"
         f" with serial number {product.serial_number}"
-        f" manufactured on {product.manufacturing_date}"
+        f" manufactured in {product.manufacturing_date}"
         f" by the company {product.company_name}"
         f" valid until {product.expiration_date}"
-        f" must be stored according to the following instructions: "
+        f" must be stored according to the following instructions:"
         f"{product.storage_instructions}."
     )
 
